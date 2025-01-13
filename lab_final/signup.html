@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Author Signup</title>
+    <script>
+        // Null validation for registration
+        function validateForm() {
+            const authorName = document.getElementById('authorName').value;
+            const contactNo = document.getElementById('contactNo').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (!authorName || !contactNo || !username || !password) {
+                alert('All fields must be filled out.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Author Signup</h1>
+    <form method="POST" action="signup.php" onsubmit="return validateForm()">
+        <label for="authorName">Author Name:</label>
+        <input type="text" id="authorName" name="authorName"><br><br>
+
+        <label for="contactNo">Contact No:</label>
+        <input type="text" id="contactNo" name="contactNo"><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Signup</button>
+        <p><a href="login.html">login here!!</p>
+    </form>
+</body>
+</html>
